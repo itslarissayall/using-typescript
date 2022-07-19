@@ -1,4 +1,11 @@
-import { Bussiness } from "./models/negociacao.js";
-import { businessController } from "./controllers/negociacao-controller.js"
+import { Negociacao } from "./models/negociacao.js";
+import { NegociacaoController } from "./controllers/negociacao-controller.js"
 
-const controller = new businessController()
+const controller = new NegociacaoController();
+const form = document.querySelector(".form");
+
+form.addEventListener ("submit", event => {
+    event.preventDefault();
+    controller.adiciona();
+})
+
